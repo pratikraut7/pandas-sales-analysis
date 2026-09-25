@@ -1,0 +1,14 @@
+Summary:
+
+- East Technology has the highest sales among all region-category combinations at 264,973.98, with a profit of 47,462.04.
+- West Office Supplies generates the highest profit at 52,609.85.
+- West Furniture has the highest Furniture sales at 252,612.74.
+- Central Furniture is the only loss-making category, with a loss of 2,871.05.
+- Central Furniture also has the highest average discount at 29.74%.
+- West Office Supplies has the lowest average discount at 9.34% and the highest profit of 52,609.85.
+- Office Supplies has the highest quantity in most regions.
+- West Office Supplies has the highest quantity sold at 7,235 units.
+- East Office Supplies has 1,074 orders, while West Office Supplies has the highest number of orders at 1,169.
+- Technology performs strongly across all regions, especially in the East.
+- The data shows that higher discounts do not necessarily result in higher profits.
+- Central Furniture has a high discount but makes a loss, while West Office Supplies has a low discount and generates the highest profit.

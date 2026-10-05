@@ -1,0 +1,376 @@
+============================================================
+🟢 LEVEL 1 — PANDAS BASICS
+============================================================
+
+Q1. Load and inspect the data
+Load the CSV into a DataFrame and display:
+- First 5 rows
+- Last 5 rows
+- Number of rows and columns
+- Column names
+- Data types of all columns
+
+
+Q2. Basic statistics
+Find:
+- Total number of records
+- Total sales
+- Total profit
+- Total quantity sold
+- Average sales
+- Average profit
+
+
+Q3. Select columns
+Create a new DataFrame containing only:
+- Customer Name
+- Segment
+- City
+- State
+- Category
+- Sales
+- Profit
+
+
+Q4. Filtering
+Find all records where:
+1. Sales > 500
+2. Profit > 100
+3. Discount > 0
+4. Category == "Furniture"
+
+Then find records where:
+Sales > 500 AND Profit < 0
+
+
+Q5. Sorting
+Sort the DataFrame:
+1. By Sales from highest to lowest
+2. By Profit from lowest to highest
+3. By Category ascending and Sales descending
+
+
+============================================================
+🟢 LEVEL 2 — DATA CLEANING & TRANSFORMATION
+============================================================
+
+Q6. Missing values
+Find:
+- Number of missing values in each column
+- Total missing values in the entire DataFrame
+- Columns containing at least one missing value
+
+
+Q7. Unique values
+Find:
+- Number of unique customers
+- Number of unique products
+- Number of unique cities
+- Number of unique states
+- Unique categories
+- Unique sub-categories
+- Unique regions
+
+
+Q8. value_counts()
+Find the number of records for each:
+- Category
+- Sub-Category
+- Segment
+- Region
+- Ship Mode
+- Profit Status
+- Discount Status
+
+
+Q9. Create a new column
+Create a column called "Profit Margin":
+
+Profit Margin = Profit / Sales * 100
+
+Display:
+- Product Name
+- Sales
+- Profit
+- Profit Margin
+
+for the first 10 rows.
+
+
+Q10. Use apply()
+Create a column called "Sales Level":
+
+Sales < 100          -> "Low"
+Sales between 100-500 -> "Medium"
+Sales > 500          -> "High"
+
+
+============================================================
+🟡 LEVEL 3 — GROUPBY
+============================================================
+
+Q11. Category analysis
+Calculate total:
+- Sales
+- Profit
+- Quantity
+
+for each Category.
+
+
+Q12. Region analysis
+Find the total Sales and Profit for each Region.
+
+Then sort the result by Profit in descending order.
+
+
+Q13. Sub-category analysis
+Find the average Sales for every Sub-Category.
+
+Which Sub-Categories have an average Sales value greater than 200?
+
+
+Q14. Customer analysis
+Find the top 10 customers by total Sales.
+
+Output:
+- Customer Name
+- Total Sales
+
+
+Q15. Customer profitability
+Find:
+- Top 10 customers based on total Profit
+- 10 customers with the lowest total Profit
+
+
+Q16. Multiple aggregations
+For each Category, calculate:
+- Total Sales
+- Average Sales
+- Total Profit
+- Average Profit
+- Total Quantity
+
+Use .agg()
+
+
+============================================================
+🟠 LEVEL 4 — DATE ANALYSIS
+============================================================
+
+Q17. Convert dates and extract information
+Convert:
+- Order Date
+- Ship Date
+
+into proper datetime columns.
+
+Then create:
+- Order Year
+- Order Month
+- Order Day
+
+
+Q18. Yearly sales
+Calculate total:
+- Sales
+- Profit
+- Quantity
+
+for each Order Year.
+
+
+Q19. Monthly sales
+Find total Sales for each month.
+
+Then determine which month has the highest total Sales.
+
+
+Q20. Shipping time
+Create a column called "Shipping Days":
+
+Shipping Days = Ship Date - Order Date
+
+Find:
+- Average shipping days
+- Maximum shipping days
+- Minimum shipping days
+- Orders taking more than 5 days
+
+Also identify records where Shipping Days is negative.
+
+
+============================================================
+🔴 LEVEL 5 — ADVANCED PANDAS
+============================================================
+
+Q21. Category + Region
+Create a table showing total Profit for every
+Category × Region combination.
+
+Solve using groupby() or pivot_table().
+
+
+Q22. Pivot table
+Create a pivot table where:
+- Rows = Region
+- Columns = Category
+- Values = Sales
+- Aggregation = sum
+
+
+Q23. Most profitable products
+Find the top 10 products based on total Profit.
+
+Remember:
+The same product can appear in multiple rows,
+so group the products first.
+
+
+Q24. Loss-making products
+Find products where:
+
+Total Sales > 1000
+AND
+Total Profit < 0
+
+Group the data first, then filter the result.
+
+
+Q25. Discount analysis
+Calculate the average Profit for each Discount level:
+
+0%
+10%
+20%
+30%
+40%
+50%
+
+Then compare it with the number of records
+at each Discount level.
+
+
+============================================================
+🔥 LEVEL 6 — REAL DATA ANALYSIS
+============================================================
+
+Q26. Category profitability
+For each Category calculate:
+- Total Sales
+- Total Profit
+- Profit Margin
+
+Profit Margin =
+Total Profit / Total Sales * 100
+
+
+Q27. Customer purchase behavior
+Find customers who:
+- Have at least 10 orders/records
+- Have total Sales greater than 5000
+- Have positive total Profit
+
+
+Q28. Repeat customers
+Find customers who purchased products in more than one year.
+
+Output:
+- Customer Name
+- Number of Years
+- Total Sales
+
+
+Q29. Product performance
+For every Sub-Category calculate:
+- Total Sales
+- Total Profit
+- Average Discount
+- Total Quantity
+- Profit Margin
+
+Then identify Sub-Categories with negative total Profit.
+
+
+Q30. Business-style analysis
+Find the top 10 States by total Sales.
+
+For those states, show:
+- State
+- Total Sales
+- Total Profit
+- Average Discount
+- Total Quantity
+- Profit Margin
+
+Sort by Total Sales descending.
+
+
+============================================================
+💀 CHALLENGE QUESTIONS
+============================================================
+
+Q31. Best-selling product in each category
+For every Category, find the product with the
+highest total Sales.
+
+Expected output:
+- Category
+- Product Name
+- Total Sales
+
+
+Q32. Most profitable customer in each region
+For every Region, find the customer with the
+highest total Profit.
+
+
+Q33. Loss percentage
+Calculate Loss Percentage for each Category:
+
+Loss Percentage =
+Number of loss-making records / Total records * 100
+
+A loss-making record means Profit < 0.
+
+
+Q34. Discount vs profitability
+For each Discount level calculate:
+- Number of Orders
+- Total Sales
+- Total Profit
+- Average Profit
+- Percentage of loss-making records
+
+
+Q35. 🚀 FINAL PANDAS CHALLENGE
+
+Create a complete Sales Performance Summary containing:
+
+- Region
+- Category
+- Total Sales
+- Total Profit
+- Total Quantity
+- Average Discount
+- Profit Margin
+- Number of Orders
+
+Profit Margin =
+Total Profit / Total Sales * 100
+
+Then sort the result by:
+Region ascending
+and Total Sales descending
+
+This question should use:
+- groupby()
+- agg()
+- reset_index()
+- calculated columns
+- sorting
+
+ ------------------------------------------------------------
+  END OF PANDAS PRACTICE
+ ------------------------------------------------------------
